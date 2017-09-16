@@ -1,0 +1,14 @@
+
+<config>
+ <name> Hello world </name>
+
+  <FULLSCREEN bool ="false"></FULLSCREEN>
+  <BORDERLESS bool ="false"></BORDERLESS>
+  <RESIZABLE bool ="true"></RESIZABLE>
+  <FULLSCREEN_WINDOW bool ="false"></FULLSCREEN_WINDOW>
+  <TITLE char ="replaceme title"></TITLE>
+  <WIDTH INT ="1024"></WIDTH>
+  <HEIGHT INT ="768"></HEIGHT>
+  <SCALE INT ="1"></SCALE> 
+  
+</config>
