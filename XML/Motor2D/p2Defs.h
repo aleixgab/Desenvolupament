@@ -54,15 +54,6 @@ template <class VALUE_TYPE> void SWAP(VALUE_TYPE& a, VALUE_TYPE& b)
 // TODO 6: Improve config.xml to store all configuration variables that we have as macros
 // Use a section with the name of each module (see Module::name)
 
-/*#define FULLSCREEN 	App->node.child("FULLSCREEN").child_value()
-#define BORDERLESS 	App->node.child("BORDERLESS").child_value()
-#define RESIZABLE	App->node.child("RESIZABLE").child_value()
-#define FULLSCREEN_WINDOW  App->node.child("FULLSCREEN_WINDOW").child_value()
-#define TITLE  App->node.child("TITLE").child_value()
-#define WIDTH  App->node.child("WIDTH").child_value()
-#define HEIGHT App->node.child("HEIGHT").child_value()
-#define SCALE  App->node.child("SCALE").child_value.()*/
-
 
 /*#define FULLSCREEN false
 #define BORDERLESS 	false
@@ -72,6 +63,16 @@ template <class VALUE_TYPE> void SWAP(VALUE_TYPE& a, VALUE_TYPE& b)
 #define WIDTH  1024
 #define HEIGHT 768
 #define SCALE  1*/
+
+#define FULLSCREEN App->node.child("globals").attribute("fullscreen").as_bool()
+#define BORDERLESS App->node.child("globals").attribute("borderless").as_bool()
+#define RESIZABLE App->node.child("globals").attribute("resizable").as_bool()
+#define FULLSCREEN_WINDOW App->node.child("globals").attribute("fullscreen_window").as_bool()
+#define TITLE App->node.child("globals").attribute("title").value()
+#define WIDTH App->node.child("globals").attribute("width").as_int()
+#define HEIGHT App->node.child("globals").attribute("height").as_int()
+#define SCALE App->node.child("globals").attribute("scale").as_int()
+
 
 
 
