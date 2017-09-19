@@ -4,6 +4,9 @@
 #include "j1FileSystem.h"
 #include "j1Audio.h"
 
+#include <iostream>
+using namespace std;
+
 #include "SDL/include/SDL.h"
 #include "SDL_mixer\include\SDL_mixer.h"
 #pragma comment( lib, "SDL_mixer/libx86/SDL2_mixer.lib" )
@@ -90,6 +93,7 @@ bool j1Audio::PlayMusic(const char* path, float fade_time)
 
 	if(music != NULL)
 	{
+
 		if(fade_time > 0.0f)
 		{
 			Mix_FadeOutMusic(int(fade_time * 1000.0f));
@@ -130,6 +134,9 @@ bool j1Audio::PlayMusic(const char* path, float fade_time)
 		}
 	}
 
+	cout << "Music volume was: " << Mix_VolumeMusic(MUSIC_VOLUME) << endl;
+	cout << "Music volume is now: " << Mix_VolumeMusic(-1) << endl;
+
 	LOG("Successfully playing %s", path);
 	return ret;
 }
@@ -169,6 +176,9 @@ bool j1Audio::PlayFx(unsigned int id, int repeat)
 	{
 		Mix_PlayChannel(-1, fx[id - 1], repeat);
 	}
+
+	cout << "FX volume was: " << Mix_Volume(-1, FX_VOLUME) << endl;
+	cout << "FX volume was: " << Mix_Volume(-1, -1) << endl;
 
 	return ret;
 }

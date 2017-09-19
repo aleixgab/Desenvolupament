@@ -31,6 +31,9 @@ bool j1Scene::Start()
 {
 	img = App->tex->Load("textures/test.png");
 	App->audio->PlayMusic("audio/music/music_sadpiano.ogg");
+	
+	App->audio->LoadFx("audio/fx/hello_man.wav");
+	
 	return true;
 }
 
@@ -44,6 +47,9 @@ bool j1Scene::PreUpdate()
 // Called each loop iteration
 bool j1Scene::Update(float dt)
 {
+	if (App->input->GetKeyDown(SDLK_SPACE))
+		App->audio->PlayFx(1, 0);
+
 	App->render->Blit(img, 0, 0);
 	return true;
 }
@@ -53,7 +59,7 @@ bool j1Scene::PostUpdate()
 {
 	bool ret = true;
 
-	if(App->input->GetKeyDown(SDLK_ESCAPE) == true)
+	if (App->input->GetKeyDown(SDLK_ESCAPE) == true)
 		ret = false;
 
 	return ret;

@@ -6,6 +6,7 @@
 #include "PugiXml\src\pugixml.hpp"
 
 using namespace pugi;
+
 // Modules
 class j1Window;
 class j1Input;
@@ -25,7 +26,7 @@ public:
 	virtual ~j1App();
 
 	// Called before render is available
-	bool Awake(xml_node* x_node);
+	bool Awake(xml_node* p_node);
 
 	// Called before the first frame
 	bool Start();
@@ -72,20 +73,18 @@ public:
 
 	xml_node node;
 
-
 private:
 
 	p2List<j1Module*>	modules;
 	uint				frames;
 	float				dt;
 
-	xml_document doc;
-	xml_parse_result result;
-
-
 	// TODO 2: Create two new variables from pugui namespace:
 	// a xml_document to store the while config file and
 	// a xml_node to read specific branches of the xml
+	
+	xml_document xml_doc;
+	xml_parse_result result;
 
 	int					argc;
 	char**				args;

@@ -54,27 +54,14 @@ template <class VALUE_TYPE> void SWAP(VALUE_TYPE& a, VALUE_TYPE& b)
 // TODO 6: Improve config.xml to store all configuration variables that we have as macros
 // Use a section with the name of each module (see Module::name)
 
-
-/*#define FULLSCREEN false
-#define BORDERLESS 	false
-#define RESIZABLE	true
-#define FULLSCREEN_WINDOW  false
-#define TITLE  "replaceme tilte"
-#define WIDTH  1024
-#define HEIGHT 768
-#define SCALE  1*/
-
-#define FULLSCREEN App->node.child("globals").attribute("fullscreen").as_bool()
-#define BORDERLESS App->node.child("globals").attribute("borderless").as_bool()
-#define RESIZABLE App->node.child("globals").attribute("resizable").as_bool()
-#define FULLSCREEN_WINDOW App->node.child("globals").attribute("fullscreen_window").as_bool()
-#define TITLE App->node.child("globals").attribute("title").value()
-#define WIDTH App->node.child("globals").attribute("width").as_int()
-#define HEIGHT App->node.child("globals").attribute("height").as_int()
-#define SCALE App->node.child("globals").attribute("scale").as_int()
-
-
-
+#define FULLSCREEN App->node.child("j1Window").attribute("fullscreen").as_bool()
+#define BORDERLESS App->node.child("j1Window").attribute("borderless").as_bool()
+#define RESIZABLE App->node.child("j1Window").attribute("resizable").as_bool()
+#define FULLSCREEN_WINDOW App->node.child("j1Window").attribute("fullscreen_window").as_bool()
+#define TITLE App->node.child("j1Window").attribute("title").value()
+#define WIDTH App->node.child("j1Window").attribute("width").as_int()
+#define HEIGHT App->node.child("j1Window").attribute("height").as_int()
+#define SCALE App->node.child("j1Window").attribute("scale").as_int()
 
 // Joins a path and file
 inline const char* const PATH(const char* folder, const char* file)

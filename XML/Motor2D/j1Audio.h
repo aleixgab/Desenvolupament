@@ -2,8 +2,11 @@
 #define __j1AUDIO_H__
 
 #include "j1Module.h"
+#include "j1App.h"
 
-#define DEFAULT_MUSIC_FADE_TIME 2.0f
+#define DEFAULT_MUSIC_FADE_TIME App->node.child("j1Audio").attribute("default_music_fade_time").as_float()
+#define MUSIC_VOLUME App->node.child("j1Audio").attribute("music_volume").as_int()
+#define FX_VOLUME App->node.child("j1Audio").attribute("fx_volume").as_int()
 
 struct _Mix_Music;
 struct Mix_Chunk;

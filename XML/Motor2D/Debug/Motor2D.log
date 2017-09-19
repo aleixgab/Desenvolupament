@@ -1,13 +1,14 @@
-﻿  j1Window.cpp
-  Generating Code...
-  Compiling...
+﻿  pugixml.cpp
+  j1Window.cpp
   j1Textures.cpp
-  j1Scene.cpp
   j1Render.cpp
-  j1Main.cpp
+  p2Log.cpp
+  j1Scene.cpp
   j1Input.cpp
   j1Audio.cpp
   j1App.cpp
+  j1Main.cpp
   Generating Code...
+  LINK : C:\Users\AleixG\Desktop\Dessenvolupament\XML\Debug\Motor 2D.exe not found or not built by the last incremental link; performing full link
   Motor2D.vcxproj -> C:\Users\AleixG\Desktop\Dessenvolupament\XML\Debug\Motor 2D.exe
   Motor2D.vcxproj -> C:\Users\AleixG\Desktop\Dessenvolupament\XML\Debug\Motor 2D.pdb (Full PDB)
