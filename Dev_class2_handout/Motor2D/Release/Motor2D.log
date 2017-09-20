@@ -1,0 +1,14 @@
+﻿  j1App.cpp
+j1App.cpp(154): error C2143: syntax error: missing ';' before 'const'
+j1App.cpp(154): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+j1App.cpp(154): warning C4091: ' ': ignored on left of 'const int' when no variable is declared
+j1App.cpp(155): error C2143: syntax error: missing ';' before 'const'
+j1App.cpp(155): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+j1App.cpp(155): warning C4091: ' ': ignored on left of 'const int' when no variable is declared
+  j1Audio.cpp
+  j1Input.cpp
+  j1Main.cpp
+  j1Render.cpp
+  j1Scene.cpp
+  j1Textures.cpp
+  j1Window.cpp
