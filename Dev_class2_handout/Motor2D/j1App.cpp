@@ -152,17 +152,30 @@ void j1App::PrepareUpdate()
 void j1App::FinishUpdate()
 {
 	if (NeedLoad == true) {
-		RealLoad();
-		NeedLoad = false;
-		LOG("LOAD");
+		p2List_item<j1Module*>* item;
+		item = modules.start;
 
+		while (item != NULL){
+			RealLoad();
+			NeedLoad = false;
+			LOG("LOAD");
+
+			item = item->next;
+		}
 	}
 
 	if (NeedSave == true) {
-		RealSave();
-		NeedSave = false;
-		LOG("SAVE");
 
+		p2List_item<j1Module*>* item;
+		item = modules.start;
+
+		while (item != NULL) {
+			RealSave();
+			NeedSave = false;
+			LOG("SAVE");
+
+			item = item->next;
+		}
 	}
 	// TODO 1: This is a good place to call load / Save functions
 
@@ -299,6 +312,28 @@ void j1App::RealLoad() {
 
 // TODO 4: Create a method to actually load an xml file
 // then call all the modules to load themselves
+
+
+bool j1App::SaveConfig()
+{
+	bool ret = true;
+
+	pugi::xml_parse_result result = save_file.load_file("savegame.xml");
+
+	if (result == NULL)
+	{
+		LOG("Could not load map xml file config.xml. pugi error: %s", result.description());
+		ret = false;
+	}
+	else
+	{
+		saving = save_file.child("config");
+		app_render = saving.child("renderer");
+	}
+
+	return ret;
+}
+
 
 // TODO 7: Create a method to save the current state
 

@@ -74,6 +74,8 @@ private:
 	// Call modules after each loop iteration
 	bool PostUpdate();
 
+	bool SaveConfig();
+
 	mutable bool NeedSave = false;
 	bool NeedLoad = false;
 
@@ -103,6 +105,11 @@ private:
 
 	p2SString			title;
 	p2SString			organization;
+
+
+	pugi::xml_document	save_file;
+	pugi::xml_node		saving;
+	pugi::xml_node		app_render;
 
 };
 
