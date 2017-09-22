@@ -172,7 +172,7 @@ void j1App::FinishUpdate()
 			item->data->RealSave(saving.child(item->data->name.GetString()));
 			item = item->next;
 		}
-		save_file.save_file("savegame.xml");
+		save_file.save_file("Saving.xml");
 		NeedSave = false;
 	}
 	// TODO 1: This is a good place to call load / Save functions
@@ -299,7 +299,7 @@ void j1App::Load() {
 }
 
 void j1App::Save_Game(){
-	pugi::xml_parse_result result = save_file.load_file("savegame.xml");
+	pugi::xml_parse_result result = save_file.load_file("Saving.xml");
 
 	if (result == NULL)
 	{
