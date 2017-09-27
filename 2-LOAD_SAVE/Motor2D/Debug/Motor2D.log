@@ -1,2 +1,14 @@
-﻿  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\2-LOAD_SAVE\Debug\Motor 2D.exe
+﻿  pugixml.cpp
+  j1Window.cpp
+  j1Textures.cpp
+  j1Render.cpp
+  p2Log.cpp
+  j1Scene.cpp
+  j1Input.cpp
+  j1Audio.cpp
+  j1App.cpp
+  j1Main.cpp
+  Generating Code...
+  LINK : C:\Users\aleixgm\Desktop\Desenvolupament\2-LOAD_SAVE\Debug\Motor 2D.exe not found or not built by the last incremental link; performing full link
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\2-LOAD_SAVE\Debug\Motor 2D.exe
   Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\2-LOAD_SAVE\Debug\Motor 2D.pdb (Full PDB)
