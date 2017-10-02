@@ -1,0 +1,4 @@
+﻿  j1Map.cpp
+c:\users\aleixgm\desktop\desenvolupament\3-tiled\motor2d\j1map.cpp(97): warning C4715: 'j1Map::Load': not all control paths return a value
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\3-TILED\Debug\Motor 2D.exe
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\3-TILED\Debug\Motor 2D.pdb (Partial PDB)
