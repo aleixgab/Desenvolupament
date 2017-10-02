@@ -41,6 +41,7 @@ bool j1Map::CleanUp()
 {
 	LOG("Unloading map");
 
+
 	// TODO 2: Make sure you clean up any memory allocated
 	// from tilesets / map
 
@@ -67,11 +68,25 @@ bool j1Map::Load(const char* file_name)
 	if(ret == true)
 	{
 		
-		
+		if (LoadMap())
+		{
+			LOG("Successfully parsed map XML file: %s", file_name);
+			LOG("width: %i height: %i", Map.width, Map.height);
+			LOG("tile_width: %i tile_height: %i", Map.tilewidth, Map.tileheight);
+			
+			map_loaded = ret;
+
+		}
 		// TODO 3: Create and call a private function to load and fill
 		// all your map data
 	}
 
+	/*if (map_loaded) {
+
+
+
+
+	}*/
 	// TODO 4: Create and call a private function to load a tileset
 	// remember to support more any number of tilesets!
 	
@@ -87,3 +102,43 @@ bool j1Map::Load(const char* file_name)
 	return ret;
 }
 
+
+bool j1Map::LoadMap() {
+	bool ret = true;
+
+	pugi::xml_node map = map_file.child("Map");
+
+	p2SString Orientation = map.attribute("orietation").as_string();
+
+	if (Orientation == "orthogonal")
+		Map.O = orthogonal;
+	else if (Orientation == "isometric")
+		Map.O = isometric;
+	else if (Orientation == "staggered")
+		Map.O = staggered;
+	else if (Orientation == "hexagonal")
+		Map.O = hexagonal;
+
+	p2SString Renderorder = map.attribute("renderorder").as_string();
+
+	if (Orientation == "right_down")
+		Map.R = right_down;
+	else if (Orientation == "right_up")
+		Map.R = right_up;
+	else if (Orientation == "left_down")
+		Map.R = left_down;
+	else if (Orientation == "left_up")
+		Map.R = left_up;
+
+	Map.width = map.attribute("width").as_uint;
+	Map.height = map.attribute("height").as_uint;
+	Map.tileheight = map.attribute("tileheight").as_uint;
+	Map.tilewidth = map.attribute("tilewidth").as_uint;
+	Map.nextobjectid = map.attribute("nextobjectid").as_uint;
+
+
+	Orientation.Clear();
+	Renderorder.Clear();
+
+		return ret;
+}
