@@ -1,0 +1,10 @@
+﻿  j1Map.cpp
+c:\users\aleixgm\desktop\desenvolupament\4-map\motor2d\j1map.cpp(40): warning C4018: '<': signed/unsigned mismatch
+c:\users\aleixgm\desktop\desenvolupament\4-map\motor2d\j1map.cpp(42): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
+  j1Scene.cpp
+  j1App.cpp
+  Generating Code...
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\4-MAP\Debug\Motor 2D.exe
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\4-MAP\Debug\Motor 2D.pdb (Partial PDB)

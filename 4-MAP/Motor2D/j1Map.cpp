@@ -32,7 +32,22 @@ void j1Map::Draw()
 		return;
 
 	// TODO 5: Prepare the loop to draw all tilesets + Blit
+	p2List_item<TileSet*>* tile = data.tilesets.start;
+	p2List_item<MapLayer*>* layer = data.map_layer.start;
 
+	while (tile != nullptr && layer != nullptr)
+	{
+		for (int i = 0; i < layer->data->width; i++)
+		{
+			for (int j = 0; j < layer->data->height; j++)
+			{
+				App->render->Blit(tile->data->texture, i, j);
+			}				
+		}
+		tile = tile->next;
+		layer = layer->next;
+	}
+	
 		// TODO 9: Complete the draw function
 
 }
@@ -134,11 +149,17 @@ bool j1Map::Load(const char* file_name)
 	
 	// TODO 4: Iterate all layers and load each of them
 	// Load layer info ----------------------------------------------
-	p2List_item<MapLayer*>* iter = data.map_layer.start;
-
-	while (iter != NULL)
+	pugi::xml_node layer;
+	for (layer = map_file.child("map").child("layer"); layer && ret; layer = layer.next_sibling("layer"))
 	{
+		MapLayer* lay = new MapLayer();
 
+		if (ret == true)
+		{
+			ret = LoadLayer(layer, lay);
+		}
+		data.map_layer.add(lay);
+		
 	}
 
 
@@ -314,13 +335,18 @@ bool j1Map::LoadLayer(pugi::xml_node& node, MapLayer* layer)
 	layer->width = node.attribute("width").as_uint();
 	layer->name = node.attribute("name").as_string();
 	 
+
+	layer->data_encoding = new uint[(layer->height) * (layer->width)];
 	layer->size_data = (layer->height) * (layer->width);
 
-	memset(layer->data_encoding, 0, layer->size_data);
+	memset(layer->data_encoding, 0, layer->size_data*sizeof(uint));
 
-	for (int i = 0; i < layer->size_data; i++)
+	pugi::xml_node iter;
+	for (iter = node.child("data").child("tile"); iter; iter = iter.next_sibling("tile"))
 	{
-		
+		int i = 0;
+		layer->data_encoding[i] = iter.set_value("tile");
+		i++;
 	}
 
 
