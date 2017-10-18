@@ -1,0 +1,5 @@
+﻿  j1Map.cpp
+c:\users\aleixgm\desktop\dev_class7.5_handout\motor2d\j1map.cpp(184): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\aleixgm\desktop\dev_class7.5_handout\motor2d\j1map.cpp(185): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Dev_class7.5_handout\Debug\Dev Class7.5 Handout.exe
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Dev_class7.5_handout\Debug\Dev Class7.5 Handout.pdb (Partial PDB)
