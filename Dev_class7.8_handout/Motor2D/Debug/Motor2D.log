@@ -1,6 +1,17 @@
-﻿  j1Map.cpp
-c:\users\aleixg\desktop\development\desenvolupament\dev_class7.8_handout\motor2d\j1map.cpp(97): warning C4018: '<': no coinciden signed/unsigned
-c:\users\aleixg\desktop\development\desenvolupament\dev_class7.8_handout\motor2d\j1map.cpp(273): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-c:\users\aleixg\desktop\development\desenvolupament\dev_class7.8_handout\motor2d\j1map.cpp(274): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-  Motor2D.vcxproj -> C:\Users\AleixG\Desktop\Development\Desenvolupament\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.exe
-  Motor2D.vcxproj -> C:\Users\AleixG\Desktop\Development\Desenvolupament\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.pdb (Partial PDB)
+﻿  pugixml.cpp
+  j1Window.cpp
+  j1Textures.cpp
+  j1Render.cpp
+  p2Log.cpp
+  j1Scene.cpp
+  j1Map.cpp
+c:\users\aleixgm\desktop\desenvolupament\dev_class7.8_handout\motor2d\j1map.cpp(98): warning C4018: '<': signed/unsigned mismatch
+c:\users\aleixgm\desktop\desenvolupament\dev_class7.8_handout\motor2d\j1map.cpp(274): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\aleixgm\desktop\desenvolupament\dev_class7.8_handout\motor2d\j1map.cpp(275): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  j1Input.cpp
+  j1Audio.cpp
+  j1App.cpp
+  j1Main.cpp
+  Generating Code...
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.exe
+  Motor2D.vcxproj -> C:\Users\aleixgm\Desktop\Desenvolupament\Dev_class7.8_handout\Debug\Dev Class7.8 Handout.pdb (Partial PDB)
