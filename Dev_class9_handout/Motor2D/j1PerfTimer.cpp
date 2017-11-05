@@ -2,7 +2,7 @@
 // j1PerfTimer.cpp
 // Slow timer with microsecond precision
 // ----------------------------------------------------
-
+#include "j1App.h"
 #include "j1PerfTimer.h"
 #include "SDL\include\SDL_timer.h"
 

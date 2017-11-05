@@ -13,6 +13,9 @@
 #include "j1Map.h"
 #include "j1Pathfinding.h"
 #include "j1App.h"
+#include	"j1PerfTimer.h"
+#include "j1Timer.h"
+
 
 // TODO 3: Measure the amount of ms that takes to execute:
 // App constructor, Awake, Start and CleanUp
@@ -29,6 +32,8 @@ j1App::j1App(int argc, char* args[]) : argc(argc), args(args)
 	scene = new j1Scene();
 	map = new j1Map();
 	pathfinding = new j1PathFinding();
+
+
 
 	// Ordered for awake / Start / Update
 	// Reverse order of CleanUp
@@ -68,6 +73,7 @@ void j1App::AddModule(j1Module* module)
 // Called before render is available
 bool j1App::Awake()
 {
+	timer = SDL_GetTicks();
 	pugi::xml_document	config_file;
 	pugi::xml_node		config;
 	pugi::xml_node		app_config;
@@ -96,6 +102,7 @@ bool j1App::Awake()
 			item = item->next;
 		}
 	}
+	LOG("j1App::Awake took %ims", SDL_GetTicks() - timer);
 
 	return ret;
 }
@@ -103,6 +110,7 @@ bool j1App::Awake()
 // Called before the first frame
 bool j1App::Start()
 {
+	timer = SDL_GetTicks();
 	bool ret = true;
 	p2List_item<j1Module*>* item;
 	item = modules.start;
@@ -112,12 +120,14 @@ bool j1App::Start()
 		ret = item->data->Start();
 		item = item->next;
 	}
+	LOG("j1App::Start took %ims", SDL_GetTicks() - timer);
 	return ret;
 }
 
 // Called each loop iteration
 bool j1App::Update()
 {
+	timer = SDL_GetTicks();
 	bool ret = true;
 	PrepareUpdate();
 
@@ -134,6 +144,7 @@ bool j1App::Update()
 		ret = PostUpdate();
 
 	FinishUpdate();
+	//LOG("j1App::Update took %ims", SDL_GetTicks() - timer);
 	return ret;
 }
 
@@ -166,7 +177,7 @@ void j1App::FinishUpdate()
 	if(want_to_load == true)
 		LoadGameNow();
 
-	// TODO 4: Now calculate:
+	//  TODO 4: Now calculate:
 	// Amount of frames since startup
 	// Amount of time since game start (use a low resolution timer)
 	// Average FPS for the whole game life

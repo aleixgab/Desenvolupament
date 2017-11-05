@@ -91,11 +91,14 @@ public:
 	j1Map*				map = NULL;
 	j1PathFinding*		pathfinding = NULL;
 
+
+
 private:
 
 	p2List<j1Module*>	modules;
 	int					argc;
 	char**				args;
+	uint				timer;
 
 	p2SString			title;
 	p2SString			organization;

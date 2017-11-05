@@ -2,7 +2,7 @@
 // j1Timer.cpp
 // Fast timer with milisecons precision
 // ----------------------------------------------------
-
+#include "j1App.h"
 #include "j1Timer.h"
 #include "SDL\include\SDL_timer.h"
 

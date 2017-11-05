@@ -1,0 +1,9 @@
+﻿  j1App.cpp
+c:\users\aleixg\desktop\development\desenvolupament\dev_class9_handout\motor2d\j1app.cpp(76): warning C4244: '=': conversión de 'Uint64' a 'uint'; posible pérdida de datos
+c:\users\aleixg\desktop\development\desenvolupament\dev_class9_handout\motor2d\j1app.cpp(113): warning C4244: '=': conversión de 'Uint64' a 'uint'; posible pérdida de datos
+c:\users\aleixg\desktop\development\desenvolupament\dev_class9_handout\motor2d\j1app.cpp(130): warning C4244: '=': conversión de 'Uint64' a 'uint'; posible pérdida de datos
+c:\users\aleixg\desktop\development\desenvolupament\dev_class9_handout\motor2d\j1app.cpp(195): warning C4477: 'sprintf_s' : la cadena de formato '%lu' requiere un argumento de tipo 'unsigned long', pero el argumento variádico 6 tiene el tipo 'uint64'
+  c:\users\aleixg\desktop\development\desenvolupament\dev_class9_handout\motor2d\j1app.cpp(195): note: considere el uso de ' %llu' en la cadena de formato
+  c:\users\aleixg\desktop\development\desenvolupament\dev_class9_handout\motor2d\j1app.cpp(195): note: considere el uso de ' %I64u' en la cadena de formato
+  Motor2D.vcxproj -> C:\Users\AleixG\Desktop\Development\Desenvolupament\Dev_class9_handout\Debug\Development - Class 9 Handout.exe
+  Motor2D.vcxproj -> C:\Users\AleixG\Desktop\Development\Desenvolupament\Dev_class9_handout\Debug\Development - Class 9 Handout.pdb (Partial PDB)
